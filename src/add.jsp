@@ -10,15 +10,15 @@
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/snakes.css" rel="stylesheet" />
 
-    <title>Add a Movie | Does it have snakes?</title>
+    <title>Add a Movie | Want to find out Unicorns?</title>
   </head>
 
   <body>
     <tagfiles:header />
 
     <div class="container snakes">
-      <h2>Warn others!</h2>
-      <p>Log your sightings and provide warning to other unsuspecting viewers!</p>
+      <h2>Add your Unicorn Movie!</h2>
+      <p>Support the Unicorn Community with adding your Movie</p>
       <form action="add.do" method="post">
         Movie Title: <br />
         <input type="text" name="title" />
@@ -26,9 +26,9 @@
         IMDB Link: <br />
         <input type="text" name="imdb" />
         <br />
-        <input type="radio" name="snakes" value="true">Snakes</input>
+        <input type="radio" name="snakes" value="true">Unicorn</input>
         <br />
-        <input type="radio" name="snakes" value="false">No Snakes</input>
+        <input type="radio" name="snakes" value="false">Not so Unicorn</input>
         <br />
         <br />
         <input type="submit" value="Submit" />

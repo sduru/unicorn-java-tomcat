@@ -10,14 +10,14 @@
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/snakes.css" rel="stylesheet" />
 
-    <title>Movie List | Does it have snakes?</title>
+    <title>Movie List | Is it Unicorn?</title>
   </head>
   <body>
     <tagfiles:header />
 
     <div class="container snakes">
       <h2>Check before you watch!</h2>
-      <p>Don't get caught off guard by a snake in your favorite show.</p>
+      <p>Find favorite show which is a certified Unicorn Movie</p>
       <form action="search" method="get">
         Movie Title: 
         <input type="text" name="query" />

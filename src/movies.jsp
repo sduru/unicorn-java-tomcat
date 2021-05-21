@@ -10,7 +10,7 @@
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/snakes.css" rel="stylesheet" />
 
-    <title>Movie List | Does it have snakes?</title>
+    <title>Movie List | Is it your Unicorn movie?</title>
   </head>
   <body>
     <tagfiles:header />

@@ -50,10 +50,10 @@ public class Movie extends Media {
   public String getSnakes() {
     String snakes = null;
     if (_snakes) {
-      snakes = "Snakes";
+      snakes = "Unicorn movie";
     }
     else {
-      snakes = "No Snakes";
+      snakes = "Not so unicorn Movie";
     }
     return snakes;
   }
@@ -252,14 +252,14 @@ public class Movie extends Media {
     catch (SQLException e) { logger.warn(e.toString());}
 
     // Read database info from environment variables (standard configration)
-    if (System.getProperty("RDS_HOSTNAME") != null) {
+    if (System.getenv("RDS_HOSTNAME") != null) {
       try {
       Class.forName("org.postgresql.Driver");
-      String dbName = System.getProperty("RDS_DB_NAME");
-      String userName = System.getProperty("RDS_USERNAME");
-      String password = System.getProperty("RDS_PASSWORD");
-      String hostname = System.getProperty("RDS_HOSTNAME");
-      String port = System.getProperty("RDS_PORT");
+      String dbName = System.getenv("RDS_DB_NAME");
+      String userName = System.getenv("RDS_USERNAME");
+      String password = System.getenv("RDS_PASSWORD");
+      String hostname = System.getenv("RDS_HOSTNAME");
+      String port = System.getenv("RDS_PORT");
       String jdbcUrl = "jdbc:postgresql://" + hostname + ":" + port + "/" + dbName + "?user=" + userName + "&password=" + password;
       logger.trace("Getting remote connection with connection string from environment variables.");
       Connection con = DriverManager.getConnection(jdbcUrl);
@@ -278,9 +278,9 @@ public class Movie extends Media {
       Class.forName("org.postgresql.Driver");
       logger.info("Getting local connection");
       Connection con = DriverManager.getConnection(
-            "jdbc:postgresql://localhost/snakes",
-            "snakes",
-            "sqlpassword");
+            "jdbc:postgresql://10.0.0.140:5432/unicorn",
+            "unicorn",
+            "awsrocks2021");
       logger.info("Local connection successful.");
       return con;
     }
